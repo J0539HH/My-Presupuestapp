@@ -1,0 +1,323 @@
+body {
+  font-family: Arial, sans-serif;
+
+  background: black;
+}
+
+.cabecero {
+  background-image: url("../../Multimedia/banerJdfm.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover;
+  color: white;
+  display: grid;
+  justify-content: center;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.tabla-ingresos-egresos {
+  border-collapse: collapse;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.tabla-ingresos-egresos th,
+.tabla-ingresos-egresos td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.tabla-ingresos-egresos th {
+  background-color: #f2f2f2;
+}
+
+.elemento {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.elemento_descripcion,
+.elemento_valor,
+.elemento_porcentaje {
+  font-weight: bold;
+}
+
+.elemento_eliminar--btn {
+  width: 20px;
+  height: 20px;
+}
+
+.contenedor {
+  display: flex;
+}
+
+.presupuesto_titulo {
+  font-size: x-large;
+  margin-top: 10px;
+}
+
+.presupuesto_valor {
+  text-align: center;
+  font-size: x-large;
+}
+
+.presupuesto_ingreso {
+  margin: 10px 0 0 0;
+  background-color: #8bc34a;
+  text-align: center;
+  border-radius: 10px;
+  display: flex;
+  height: 28px;
+  padding-top: 7px;
+  padding-left: 10px;
+  width: 110%;
+}
+
+.presupuesto_egreso {
+  margin: 10px 0 10px 0;
+  background-color: #f44336;
+  text-align: center;
+  border-radius: 10px;
+  display: flex;
+  height: 28px;
+  padding-top: 7px;
+  padding-left: 10px;
+  width: 110%;
+}
+.presupuesto_ingreso--texto {
+  margin: 0 5px 0 0;
+}
+.presupuesto_egreso--texto {
+  margin: 0 5px 0 0;
+}
+
+.derecha {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+}
+
+.derechaC {
+  display: flex;
+  margin-left: calc(90% - 190px);
+}
+.presupuesto_egreso--porcentaje {
+  margin-left: 5px;
+  margin-top: 5px;
+  background-color: brown;
+  font-size: 10px;
+  height: 14px;
+  border-radius: 10px;
+  width: auto;
+  padding: 3px 4px 0px 4px;
+}
+.presupuesto_ingreso--porcentaje {
+  margin-left: 5px;
+  margin-top: 5px;
+  background-color: brown;
+  font-size: 10px;
+  height: 14px;
+  border-radius: 10px;
+  width: auto;
+  display: none;
+}
+
+.egreso {
+  border-bottom-right-radius: 5px;
+  color: white;
+  width: 50%;
+  margin-left: 1px;
+  padding-top: 15px;
+  width: 50%;
+}
+
+.egreso_titulo {
+  margin: 0;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.agregarIcon {
+  width: 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+.agregarIcon:hover {
+  transform: scale(0.8);
+}
+
+.eliminarIcon {
+  width: 30px;
+  transition: all 0.3s ease-in-out;
+  margin-left: 15px;
+}
+
+.eliminarIcon:hover {
+  transform: scale(0.8);
+}
+
+.textForm {
+  margin-left: 5px;
+}
+
+#lista-egresos {
+  margin: 0;
+  padding: 0;
+}
+
+.elemento {
+  display: flex;
+  margin: 5px 0;
+  padding: 10px;
+}
+
+.elemento_descripcion {
+  font-size: 18px;
+  margin: 0;
+  width: 50%;
+}
+
+.elemento_valor {
+  font-size: 15px;
+}
+
+.elemento_porcentaje {
+  margin-left: 10px;
+  margin-top: 5px;
+  background-color: brown;
+  font-size: 10px;
+  height: 14px;
+  border-radius: 10px;
+  width: 40px;
+  padding: 3px 7px 3px 2px;
+}
+
+.elemento_eliminar {
+  margin-left: 10px;
+}
+
+.elemento_eliminar--btn {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.elemento_eliminar--btn:hover {
+  color: #ccc;
+}
+
+.ingreso {
+  border-bottom-left-radius: 5px;
+  color: #fff;
+  overflow: hidden;
+  padding-top: 15px;
+  width: 50%;
+}
+
+.ingreso_titulo {
+  margin: 0;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.elemento {
+  margin-bottom: 10px;
+}
+
+.agregar_descripcion {
+  width: 300px;
+}
+
+.elemento_descripcion {
+  float: left;
+  font-size: 1.2em;
+}
+
+.elemento_valor {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.elemento_eliminar--btn {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-left: 10px;
+  padding: 0;
+}
+
+.elemento_eliminar--btn:focus {
+  outline: none;
+}
+.elemento {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+
+#formularioDatos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0 5px 0;
+}
+
+.border-two-colors {
+  position: relative;
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, #f44336 50%, #8bc34a 50%);
+  border-image-slice: 1;
+  background-color: white;
+}
+
+.agregar_contenedor {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.agregar_tipo {
+  margin-right: 10px;
+}
+
+.agregar_valor {
+  margin-left: 10px;
+}
+
+.agregar_valor {
+  margin-right: 10px;
+}
+
+.FooterSistema {
+  min-height: 50px;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.claseFoot {
+  background: white;
+  font-size: small;
+  font-weight: bold;
+  color: #1664ab;
+  padding: 8px 9px 9px 15px;
+  border-radius: 10px;
+  box-shadow: 12px 0px 12px #c0c0c0;
+  margin: 0 0 0px 0;
+  margin-top: 23px;
+  height: 10px;
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid #ddd;
+  width: 100%;
+  text-align: center;
+}

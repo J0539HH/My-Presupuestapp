@@ -1,0 +1,21 @@
+{
+  "name": "movimientosmonetarios",
+  "version": "1.0.0",
+  "description": "Aplicacion para visualizar movimientos monetarios",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jhosep Davis Florez Madiedo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "moment-timezone": "^0.5.43",
+    "mongodb": "^5.5.0",
+    "mongoose": "^7.1.1"
+  }
+}
