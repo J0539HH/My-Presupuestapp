@@ -6,8 +6,8 @@ var IDUSER = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
   spinner("Cargando tu información");
-  verificarSesionX();
-  setTimeout(cargarDatos, 1000);
+  cargarDatosConVerificacion();
+
 
   $("#agregar").on("click", function () {
     insertarMovimiento();
@@ -36,28 +36,40 @@ document.addEventListener("DOMContentLoaded", function () {
   limpiarCampos();
 });
 
+
+async function cargarDatosConVerificacion() {
+  try {
+    await verificarSesionX(); // Esperar a que se resuelva verificarSesionX()
+    cargarDatos(); // Llamar a cargarDatos() después de verificar la sesión
+  } catch (error) {
+    // Lógica para manejar el error...
+  }
+}
+
 function verificarSesionX() {
-  //  return;
-  console.log("VerificandoSessionbyJDFM");
-  fetch("/api/sesion")
-    .then((response) => response.json())
-    .then((data) => {
-      const idusuario = data.idusuario;
-      idrol = data.idrol;
-      IDUSER = data.idusuario;
-      if (idusuario === undefined || idusuario === null) {
-        $("#ContenedorTotal").addClass("hidden");
-        AlertIncorrectX(
-          "Estas tratando de acceder al sistema sin credenciales"
-        );
-        setTimeout(function () {
-          window.location.href = "../../acceso/Login.html";
-        }, 1000);
-      }
-    })
-    .catch((error) => {
-      console.error(error);
-    });
+  return new Promise((resolve, reject) => {
+    console.log("VerificandoSessionbyJDFM");
+    fetch("/api/sesion")
+      .then((response) => response.json())
+      .then((data) => {
+        const idusuario = data.idusuario;
+        idrol = data.idrol;
+        IDUSER = data.idusuario;
+        if (idusuario === undefined || idusuario === null) {
+          $("#ContenedorTotal").addClass("hidden");
+          AlertIncorrectX(
+            "Estás tratando de acceder al sistema sin credenciales"
+          );
+          reject(new Error("Sesión no válida")); // Rechazar la promesa en caso de sesión no válida
+        } else {
+          resolve(); // Resolver la promesa cuando la sesión es válida
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        reject(error); // Rechazar la promesa en caso de error
+      });
+  });
 }
 
 function limpiarCampos() {
