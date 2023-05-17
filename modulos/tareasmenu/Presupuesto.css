@@ -325,8 +325,7 @@ body {
 @media (max-width: 600px) {
   /* Estilos para pantallas pequeñas */
   .movilesFormat {
-    display: grid !important;
+    display: flex;
+    overflow: auto;
   }
-
-  
 }
