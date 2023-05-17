@@ -335,5 +335,6 @@ body {
     display: flex;
     justify-content: initial;
     align-items: flex-start;
+    margin-left: 5px;
   }
 }
