@@ -1,16 +1,64 @@
 var ingresos = [];
 var egresos = [];
+var movimientosINtotales = 0;
+var movimientosOUTtotales = 0;
+var IDUSER = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
-  verificarSesion();
-  cargarDatos();
+  spinner("Cargando tu información");
+  verificarSesionX();
+  setTimeout(cargarDatos, 500);
 
   $("#agregar").on("click", function () {
     insertarMovimiento();
   });
+  var fechaActual = new Date();
+  var mesActual = fechaActual.getMonth();
+  var nombresMeses = [
+    "Enero",
+    "Febrero",
+    "Marzo",
+    "Abril",
+    "Mayo",
+    "Junio",
+    "Julio",
+    "Agosto",
+    "Septiembre",
+    "Octubre",
+    "Noviembre",
+    "Diciembre",
+  ];
+  var nombreMes = nombresMeses[mesActual];
+  $("#tituloPresupuesto").html(
+    "Presupuesto del mes de " + toUpperCase(nombreMes)
+  );
 
   limpiarCampos();
 });
+
+function verificarSesionX() {
+  //  return;
+  console.log("VerificandoSessionbyJDFM");
+  fetch("/api/sesion")
+    .then((response) => response.json())
+    .then((data) => {
+      const idusuario = data.idusuario;
+      idrol = data.idrol;
+      IDUSER = data.idusuario;
+      if (idusuario === undefined || idusuario === null) {
+        $("#ContenedorTotal").addClass("hidden");
+        AlertIncorrectX(
+          "Estas tratando de acceder al sistema sin credenciales"
+        );
+        setTimeout(function () {
+          window.location.href = "../../acceso/Login.html";
+        }, 1000);
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+}
 
 function limpiarCampos() {
   $("#descripcion").val("");
@@ -76,7 +124,7 @@ function cargarDatos() {
   $("#columnaEgresos").empty();
 
   spinner("Cargando usuarios, por favor espere");
-  const url = "/api/movimientosTotal";
+  const url = `/api/movimientosActuales/${IDUSER}`;
   fetch(url)
     .then((response) => response.json())
     .then((result) => {
@@ -96,6 +144,8 @@ function cargarDatos() {
 function cargarTabla(datos) {
   ingresos = [];
   egresos = [];
+  movimientosOUTtotales = 0;
+  movimientosINtotales = 0;
 
   $.each(datos.data, function (index, movimiento) {
     if (movimiento.ingreso) {
@@ -119,6 +169,7 @@ function cargarTabla(datos) {
         "</div>" +
         "</div>";
       $("#columnaIngresos").append(elemento);
+      movimientosINtotales = movimientosINtotales + 1;
     } else {
       egresos.push(movimiento.valor);
       var elemento =
@@ -140,6 +191,7 @@ function cargarTabla(datos) {
         "</div>" +
         "</div>";
       $("#columnaEgresos").append(elemento);
+      movimientosOUTtotales = movimientosOUTtotales + 1;
     }
 
     let totalIngreso = ingresos.reduce(function (acc, valor) {
@@ -154,6 +206,12 @@ function cargarTabla(datos) {
     $("#egresosTotales").html("-" + formatoMoneda(totalEgreso));
     $("#ingresosTotales").html("+" + formatoMoneda(totalIngreso));
     $("#presupuesto").html("+" + formatoMoneda(diferencia));
+    $("#contadorIngresos").html(
+      "Movimientos :<b>" + movimientosINtotales + "</b>"
+    );
+    $("#contadorEgresos").html(
+      "Movimientos : <b>" + movimientosOUTtotales + "</b>"
+    );
     $("#spinner").hide();
   });
 }

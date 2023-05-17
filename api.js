@@ -72,15 +72,41 @@ router.post("/NewUser", jsonParser, async (req, res) => {
   }
 });
 
-// Cargar todos los movimientos
-router.get("/movimientosTotal", jsonParser, async (req, res) => {
+// Cargar todos los movimientos de este mes
+router.get("/movimientosActuales/:idusuario", jsonParser, async (req, res) => {
   try {
+    let idusuarioC = req.params.idusuario;
     const collection = database.collection("movimientos");
-    const result = await collection.find({}).toArray();
+
+    // Obtener la fecha actual
+    const fechaActual = new Date();
+
+    // Obtener el mes actual (los meses comienzan desde 0)
+    const mesActual = fechaActual.getMonth();
+
+    // Configurar la fecha inicial y final para el mes actual
+    const fechaInicioMes = new Date(fechaActual.getFullYear(), mesActual, 1);
+    const fechaFinMes = new Date(fechaActual.getFullYear(), mesActual + 1, 0);
+
+    // Convertir las fechas a formato ISO 8601
+    const fechaInicioISO = fechaInicioMes.toISOString();
+    const fechaFinISO = fechaFinMes.toISOString();
+
+    // Filtrar los movimientos por la fecha del mes actual
+    const result = await collection
+      .find({
+        fecha: {
+          $gte: fechaInicioISO,
+          $lte: fechaFinISO,
+        },
+        idusuario: parseInt(idusuarioC),
+      })
+      .toArray();
+
     if (result.length > 0) {
       res.json(result);
     } else {
-       res.json("NULL");
+      res.json("NULL");
     }
   } catch (err) {
     console.error(err);
