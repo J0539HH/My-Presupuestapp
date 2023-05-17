@@ -54,8 +54,11 @@ function verificarSesionX() {
         if (idusuario === undefined || idusuario === null) {
           $("#ContenedorTotal").addClass("hidden");
           AlertIncorrectX(
-            "Estás tratando de acceder al sistema sin credenciales"
+            "Estas tratando de acceder al sistema sin credenciales"
           );
+          setTimeout(function () {
+            window.location.href = "../../acceso/Login.html";
+          }, 1000);
           reject(new Error("Sesión no válida")); // Rechazar la promesa en caso de sesión no válida
         } else {
           resolve(); // Resolver la promesa cuando la sesión es válida
