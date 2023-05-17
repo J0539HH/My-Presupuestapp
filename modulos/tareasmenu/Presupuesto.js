@@ -7,7 +7,7 @@ var IDUSER = 0;
 document.addEventListener("DOMContentLoaded", function () {
   spinner("Cargando tu información");
   verificarSesionX();
-  setTimeout(cargarDatos, 500);
+  setTimeout(cargarDatos, 1000);
 
   $("#agregar").on("click", function () {
     insertarMovimiento();
