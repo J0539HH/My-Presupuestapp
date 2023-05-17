@@ -108,7 +108,7 @@ function cargarTabla(datos) {
         '<div class="derecha">' +
         convertirFecha(movimiento.fecha) +
         '<div class="elemento_valor">' +
-        (movimiento.ingreso ? "+ $ " : "- $ ") +
+        (movimiento.ingreso ? "+ " : "- ") +
         formatoMoneda(movimiento.valor) +
         "</div>" +
         '<div class="elemento_eliminar">' +
@@ -129,7 +129,7 @@ function cargarTabla(datos) {
         '<div class="derecha">' +
         convertirFecha(movimiento.fecha) +
         '<div class="elemento_valor">' +
-        (movimiento.ingreso ? "+ $ " : "- $ ") +
+        (movimiento.ingreso ? "+ " : "- ") +
         formatoMoneda(movimiento.valor) +
         "</div>" +
         '<div class="elemento_eliminar">' +
