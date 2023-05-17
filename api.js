@@ -73,9 +73,10 @@ router.post("/NewUser", jsonParser, async (req, res) => {
 });
 
 // Cargar todos los movimientos de este mes
-router.get("/movimientosActuales/:idusuario", jsonParser, async (req, res) => {
+router.post("/movimientosActuales", jsonParser, async (req, res) => {
   try {
-    let idusuarioC = req.params.idusuario;
+    const { idusuario } = req.body;
+    let idusuarioC = idusuario;
     const collection = database.collection("movimientos");
 
     // Obtener la fecha actual
