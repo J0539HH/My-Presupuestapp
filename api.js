@@ -77,6 +77,7 @@ router.post("/movimientosActuales", jsonParser, async (req, res) => {
   try {
     const { idusuario } = req.body;
     let idusuarioC = idusuario;
+    console.log(idusuarioC);
     const collection = database.collection("movimientos");
 
     // Obtener la fecha actual
@@ -118,7 +119,8 @@ router.post("/movimientosActuales", jsonParser, async (req, res) => {
 // Registrar nuevo movimiento
 router.post("/NewMovimiento", jsonParser, async (req, res) => {
   try {
-    const { descripcion, valor, ingreso } = req.body;
+    const { descripcion, valor, ingreso, idusuario } = req.body;
+    console.log(idusuario);
     const collection = database.collection("movimientos");
     const NewDate = moment().tz("America/Bogota").format();
     const lastMov = await collection.findOne(
@@ -132,6 +134,7 @@ router.post("/NewMovimiento", jsonParser, async (req, res) => {
       valor: valor,
       fecha: NewDate,
       ingreso: ingreso,
+      idusuario: parseInt(idusuario),
     });
     res.json(result);
   } catch (err) {

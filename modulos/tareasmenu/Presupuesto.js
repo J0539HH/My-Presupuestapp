@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
   spinner("Cargando tu información");
   cargarDatosConVerificacion();
 
-
   $("#agregar").on("click", function () {
     insertarMovimiento();
   });
@@ -29,13 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
     "Diciembre",
   ];
   var nombreMes = nombresMeses[mesActual];
-  $("#tituloPresupuesto").html(
-    "Presupuesto del mes de " + toUpperCase(nombreMes)
-  );
+  $("#tituloPresupuesto").html("Presupuesto del mes de " + nombreMes);
 
   limpiarCampos();
 });
-
 
 async function cargarDatosConVerificacion() {
   try {
@@ -79,7 +75,15 @@ function limpiarCampos() {
 
 function insertarMovimiento() {
   let descripcion = $("#descripcion").val();
+  if (descripcion === "") {
+    AlertIncorrectX("Debes agregar una descripcion del movimiento");
+    return;
+  }
   let valorUnformated = $("#valor").val();
+  if (valorUnformated === "") {
+    AlertIncorrectX("Debes agregar un valor del movimiento");
+    return;
+  }
   let valorUnformated1 = valorUnformated.replaceAll(".", "");
   var ValorFormated = parseInt(valorUnformated1, 10);
   let tipoUnformated = $("#tipo").val();
@@ -96,6 +100,7 @@ function insertarMovimiento() {
     descripcion: descripcion,
     valor: ValorFormated,
     ingreso: ingresoBool,
+    idusuario: IDUSER,
   };
   fetch(url, {
     method: "POST",
@@ -159,12 +164,9 @@ function cargarDatos() {
       }
     })
     .catch((error) => {
-      AlertIncorrecta("No se pudo cargar el movimiento");
+      console.log(error);
       $("#spinner").hide();
     });
-
-
-
 }
 
 function cargarTabla(datos) {
