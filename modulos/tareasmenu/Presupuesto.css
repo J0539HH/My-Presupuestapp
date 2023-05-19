@@ -14,10 +14,18 @@ body {
   justify-content: center;
 }
 
+.txtCnt {
+  text-align: center !important;
+}
+
+.vertical-th {
+  display: block;
+  text-align: center;
+}
+
 .contenedor {
-  display: flex;
+  display: grid;
   justify-content: center;
-  align-items: flex-start;
 }
 
 .tabla-ingresos-egresos {
@@ -51,10 +59,6 @@ body {
 .elemento_eliminar--btn {
   width: 20px;
   height: 20px;
-}
-
-.contenedor {
-  display: flex;
 }
 
 .presupuesto_titulo {
@@ -101,6 +105,7 @@ body {
   display: flex !important;
   justify-content: flex-end !important;
   align-items: center !important;
+  min-width: 40% !important;
 }
 
 .derechaC {

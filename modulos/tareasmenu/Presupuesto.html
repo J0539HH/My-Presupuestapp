@@ -11,30 +11,29 @@
         <!-- CSS Site -->
         <link rel="stylesheet" href="../tareasmenu/Presupuesto.css" />
 
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-   <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-   
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Crimson+Pro">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Crimson+Pro">
 
-    <!-- Bootstrap Icon-->
-    <link rel="stylesheet"
-      href="../../lib/js/vendor/bootstrap-icons-1.2.2/font/bootstrap-icons.css"
-      />
-    <!-- OverlayScrollbars -->
-    <link rel="stylesheet"
-      href="../../lib/js/vendor/OverlayScrollbars/css/OverlayScrollbars.min.css"
-      />
-    <!-- Sweet Alert -->
-    <link rel="stylesheet"
-      href="../../lib/js/vendor/sweetalert2/dist/sweetalert2.min.css" />
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="../../modulos/principal/styleGlobal.css" />
-    <!-- CSS Site -->
-    <link rel="stylesheet" href="../../lib/jQuery/alertas/jquery.alerts.css" />
-
+        <!-- Bootstrap Icon-->
+        <link rel="stylesheet"
+            href="../../lib/js/vendor/bootstrap-icons-1.2.2/font/bootstrap-icons.css"
+            />
+        <!-- OverlayScrollbars -->
+        <link rel="stylesheet"
+            href="../../lib/js/vendor/OverlayScrollbars/css/OverlayScrollbars.min.css"
+            />
+        <!-- Sweet Alert -->
+        <link rel="stylesheet"
+            href="../../lib/js/vendor/sweetalert2/dist/sweetalert2.min.css" />
+        <!-- Global CSS -->
+        <link rel="stylesheet" href="../../modulos/principal/styleGlobal.css" />
+        <!-- CSS Site -->
+        <link rel="stylesheet" href="../../lib/jQuery/alertas/jquery.alerts.css"
+            />
 
     </head>
     <body>
@@ -47,13 +46,15 @@
             <div class="presupuesto_ingreso limpiarEstilos">
                 <div class="presupuesto_ingreso--texto">Ingresos</div>
                 <div class="derechaC">
-                    <div class="presupuesto_ingreso--valor" id="ingresosTotales">+ 0.00</div>
+                    <div class="presupuesto_ingreso--valor" id="ingresosTotales">+
+                        0.00</div>
                 </div>
             </div>
             <div class="presupuesto_egreso limpiarEstilos">
                 <div class="presupuesto_egreso--texto">Gastos</div>
                 <div class="derechaC limpiarEstilos">
-                    <div class="presupuesto_egreso--valor" id="egresosTotales">- 0.00</div>
+                    <div class="presupuesto_egreso--valor" id="egresosTotales">-
+                        0.00</div>
                     <div class="presupuesto_egreso--porcentaje" id="porcentaje">0%</div>
                 </div>
             </div>
@@ -63,7 +64,7 @@
             <div class="agregar">
                 <div class="agregar_contenedor">
                     <select class="agregar_tipo" id="tipo">
-                        <option value="ingreso" >Ingreso</option>
+                        <option value="ingreso">Ingreso</option>
                         <option value="egreso" selected>Gasto</option>
                     </select>
                     <input class="agregar_descripcion"
@@ -87,18 +88,21 @@
             <table class="tabla-ingresos-egresos">
                 <thead>
                     <tr>
-                        <th>Ingresos <p id ="contadorIngresos"></p></th>
-                        <th>Egresos<p id ="contadorEgresos"></p></th>
+                        <th class="txtCnt vertical-th">
+                            <i class="bi bi-cash-stack"></i> Ingresos
+                            <p id="contadorIngresos"></p>
+                        </th>
+
                     </tr>
                 </thead>
                 <tbody>
-                    <tr >
+                    <tr>
                         <td id="columnaIngresos" style="width: 50%;">
                             <div class="elemento">
                                 <div class="elemento_descripcion">Salario</div>
                                 <div class="derecha">
-                                    <div class="elemento_valor" style="flex:
-                                        1;">+ $ 2.000.000</div>
+                                    <div class="elemento_valor" style="flex: 1;">+
+                                        $2.000.000</div>
                                     <div class="elemento_eliminar">
                                         <img class="elemento_eliminar--btn"
                                             src="./media/delete1.svg">
@@ -106,11 +110,17 @@
                                 </div>
                             </div>
                         </td>
+                    </tr>
+                    <th class="txtCnt vertical-th">
+                        <i class="bi bi-cash-stack"></i> Egresos
+                        <p id="contadorEgresos"></p>
+                    </th>
+                    <tr>
                         <td id="columnaEgresos" style="width: 50%;">
                             <div class="elemento">
                                 <div class="elemento_descripcion">Arriendo</div>
                                 <div class="derecha">
-                                    <div class="elemento_valor">- $ 768.500</div>
+                                    <div class="elemento_valor">- $768.500</div>
                                     <div class="elemento_porcentaje">- 34.93%</div>
                                     <div class="elemento_eliminar">
                                         <img class="elemento_eliminar--btn"
@@ -118,9 +128,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="elemento">
                                 <div class="elemento_descripcion">Alimentación</div>
                                 <div class="derecha">
-                                    <div class="elemento_valor">- $ 600.000</div>
+                                    <div class="elemento_valor">- $600.000</div>
                                     <div class="elemento_porcentaje">- 27.27%</div>
                                     <div class="elemento_eliminar">
                                         <img class="elemento_eliminar--btn"
@@ -137,15 +148,14 @@
             <p class="txtFooter ml-4 claseFoot">Powered by JDFM ©</p>
         </div>
 
-
-   <!-- Spinner Site -->
-    <div id="spinner" class="spinner">
-      <div class="contSpinner">
-        <img class="spinner-img" src="../../Multimedia/spinner.gif"
-          alt="Loading" />
-        <div id="textLoad" class="spinner-msg"></div>
-      </div>
-    </div>
+        <!-- Spinner Site -->
+        <div id="spinner" class="spinner">
+            <div class="contSpinner">
+                <img class="spinner-img" src="../../Multimedia/spinner.gif"
+                    alt="Loading" />
+                <div id="textLoad" class="spinner-msg"></div>
+            </div>
+        </div>
 
         <!-- JavaScript -->
         <script src="../tareasmenu/Presupuesto.js"></script>
