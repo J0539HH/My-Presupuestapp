@@ -31,6 +31,26 @@ document.addEventListener("DOMContentLoaded", function () {
   $("#tituloPresupuesto").html("Presupuesto del mes de " + nombreMes);
 
   limpiarCampos();
+
+  $("#botonAgregar").on("click", function () {
+    $("#agregarMovimientoModal").modal("show");
+  });
+
+  var modal = $("#agregarMovimientoModal");
+  var btn = $("#openModalBtn");
+  var span = $(".close");
+
+  // Cerrar el modal al hacer clic en la "x"
+  span.on("click", function () {
+    $("#agregarMovimientoModal").modal("hide");
+  });
+
+  // Cerrar el modal al hacer clic fuera del contenido del modal
+  $(window).on("click", function (event) {
+    if (event.target == modal[0]) {
+      $("#agregarMovimientoModal").modal("hide");
+    }
+  });
 });
 
 async function cargarDatosConVerificacion() {

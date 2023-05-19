@@ -40,7 +40,7 @@
         <div class="cabecero">
             <div class="presupuesto"></div>
             <div class="presupuesto_titulo" id="tituloPresupuesto">
-                Presupuesto Disponible - ABRIL 2023
+                Presupuesto Disponible - MES/AÑO
             </div>
             <div class="presupuesto_valor" id="presupuesto">+ 0.00 </div>
             <div class="presupuesto_ingreso limpiarEstilos">
@@ -59,31 +59,11 @@
                 </div>
             </div>
         </div>
-        <form id="formularioDatos" class="border-two-colors" onsubmit="return
-            false;">
-            <div class="agregar">
-                <div class="agregar_contenedor">
-                    <select class="agregar_tipo" id="tipo">
-                        <option value="ingreso">Ingreso</option>
-                        <option value="egreso" selected>Gasto</option>
-                    </select>
-                    <input class="agregar_descripcion"
-                        placeholder="Descripcion" id="descripcion"
-                        step="any"/>
-                    <input onkeyup="this.value= NumerosFormateados(this.value)"
-                        class="agregar_valor"
-                        placeholder="Valor" id="valor"
-                        step="any"/>
-                    <img class="agregarIcon" src="./media/check.svg"
-                        id="agregar">
+        <div id="agregarContenedor" class="contenedorAcciones"> <button
+                id="botonAgregar"
+                class="button5 btnAgregar"> Agregar
+                movimiento</button></div>
 
-                    <img class="eliminarIcon" src="./media/delete1.svg"
-                        id="limpiar">
-                    <p class="textForm">(Eliminar todo)</p>
-
-                </div>
-            </div>
-        </form>
         <div class="contenedor">
             <table class="tabla-ingresos-egresos">
                 <thead>
@@ -146,6 +126,31 @@
         </div>
         <div id="contFooter" class="FooterSistema">
             <p class="txtFooter ml-4 claseFoot">Powered by JDFM ©</p>
+        </div>
+
+        <div id="agregarMovimientoModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Agregar un movimiento de dinero</h2>
+                <div class="agregar">
+                    <div class="agregar_contenedor">
+                        <select class="agregar_tipo" id="tipo">
+                            <option value="ingreso">Ingreso</option>
+                            <option value="egreso" selected>Gasto</option>
+                        </select>
+                        <input class="agregar_descripcion"
+                            placeholder="Descripcion" id="descripcion"
+                            step="any"/>
+                        <input
+                            onkeyup="this.value= NumerosFormateados(this.value)"
+                            class="agregar_valor"
+                            placeholder="Valor" id="valor"
+                            step="any"/>
+                        <img class="agregarIcon" src="./media/check.svg"
+                            id="agregar">
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Spinner Site -->
