@@ -329,12 +329,7 @@ body {
 
 @media (max-width: 600px) {
   /* Estilos para pantallas pequeñas */
-  #formularioDatos {
-    min-width: 980px !important;
-  }
-  .cabecero {
-    min-width: 980px !important;
-  }
+
 
   .contenedor {
     display: flex;
