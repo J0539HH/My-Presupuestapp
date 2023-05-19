@@ -167,7 +167,7 @@ function cargarDatos() {
       }
     })
     .catch((error) => {
-      console.log(error);
+      AlertCorrectX("Ocurrio un error");
       $("#spinner").hide();
     });
 }
