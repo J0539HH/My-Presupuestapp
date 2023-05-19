@@ -347,20 +347,22 @@ body {
 }
 
 .agregar_tipo {
-  margin-top: 10px;
+  margin-top: 14px;
   border-radius: 4px;
   padding-left: 4px !important;
   min-width: 200px;
 }
 .agregar_descripcion {
-  margin-top: 10px;
+  margin-top: 14px;
   border-radius: 4px;
+  padding-top: 4px !important;
   padding-left: 4px !important;
   min-width: 200px;
+  min-height: 60px;
 }
 
 .agregar_valor {
-  margin-top: 10px;
+  margin-top: 14px;
   border-radius: 4px;
   padding-left: 4px !important;
   min-width: 200px;
