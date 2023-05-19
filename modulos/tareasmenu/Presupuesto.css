@@ -386,6 +386,9 @@ body {
   .cabecero {
     min-width: 630px !important;
   }
+  .contenedorAcciones {
+    min-width: 630px !important;
+  }
 
   .contenedor {
     display: flex;
