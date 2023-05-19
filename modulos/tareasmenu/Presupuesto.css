@@ -331,7 +331,7 @@ body {
   /* Estilos para pantallas pequeñas */
 
   .cabecero {
-    min-width: 540px !important;
+    min-width: 800px !important;
   }
 
   .contenedor {
