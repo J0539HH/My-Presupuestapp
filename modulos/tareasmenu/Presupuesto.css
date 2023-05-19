@@ -17,6 +17,7 @@ body {
 }
 
 .modal-content {
+  border-radius: 10px;
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
@@ -55,6 +56,11 @@ body {
   height: 55px;
   justify-content: center;
   display: flex;
+}
+.contenedorIcono {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .cabecero {
@@ -289,10 +295,6 @@ body {
   margin-bottom: 10px;
 }
 
-.agregar_descripcion {
-  width: 300px;
-}
-
 .elemento_descripcion {
   float: left;
   font-size: 1.2em;
@@ -338,22 +340,30 @@ body {
 }
 
 .agregar_contenedor {
-  display: flex;
+  display: grid;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
 .agregar_tipo {
-  margin-right: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  padding-left: 4px !important;
+  min-width: 200px;
+}
+.agregar_descripcion {
+  margin-top: 10px;
+  border-radius: 4px;
+  padding-left: 4px !important;
+  min-width: 200px;
 }
 
 .agregar_valor {
-  margin-left: 10px;
-}
-
-.agregar_valor {
-  margin-right: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  padding-left: 4px !important;
+  min-width: 200px;
 }
 
 .FooterSistema {
