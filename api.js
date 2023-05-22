@@ -9,7 +9,7 @@ const { MongoClient } = require("mongodb");
 
 // Conexion activa a la base de datos
 const uri =
-  "mongodb+srv://J0539H:dOeVo9aZOVPNsPzF@clusterdocutech.5iod7gv.mongodb.net/presupuesto?retryWrites=true&w=majority";
+  "mongodb+srv://J0539H:V1e00H8Dri6lCOAc@clusterdocutech.5iod7gv.mongodb.net/presupuesto?retryWrites=true&w=majority";
 const client = new MongoClient(uri);
 (async () => {
   try {

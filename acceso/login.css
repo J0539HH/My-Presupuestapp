@@ -166,7 +166,7 @@ div#contFooter p.pInfoFooter {
   font-weight: 700;
   font-size: var(--normal-btn-font);
   line-height: var(--lh-normal-btn-font);
-  color: var(--white-text-color);
+  color: black;
 }
 
 div#contInterfazLogin section.contForm {
