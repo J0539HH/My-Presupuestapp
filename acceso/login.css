@@ -212,7 +212,7 @@ div.contImgLogo {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   justify-content: center;
-  border: 2px solid rgb(124, 191, 66) !important;
+  border: 2px solid #f44336 !important;
   border-bottom: none !important;
 }
 
@@ -245,7 +245,7 @@ div.contInterfaceBtn button {
   padding: 40px 30px 40px 30px;
   margin-bottom: 25px;
   margin-top: 10px;
-  border: 2px solid rgb(124, 191, 66) !important;
+  border: 2px solid #f44336 !important;
 }
 
 div#contInterfazLogin {
