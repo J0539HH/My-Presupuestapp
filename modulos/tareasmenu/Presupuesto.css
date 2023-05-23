@@ -410,6 +410,17 @@ body {
     min-width: 630px !important;
   } */
 
+  .elemento_descripcion {
+    float: left;
+    font-size: small;
+    max-width: min-content;
+  }
+  .elemento {
+    margin: 5px 0;
+    padding: 10px;
+    display: inline;
+  }
+
   .contenedor {
     display: flex;
     justify-content: initial;
