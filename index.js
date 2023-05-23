@@ -17,7 +17,7 @@ app.get(
     "/lib/aes/aes.js",
     "/modulos/principal/styleGlobal.css",
     "/modulos/principal/scriptGlobal.js",
-    "/Multimedia/fondomoney.png",
+    "/Multimedia/fondoMoney.png",
     "/Multimedia/logo.jpg",
     "/Multimedia/spinner.gif",
     "/lib/js/vendor/bootstrap-icons-1.2.2/font/fonts/bootstrap-icons.woff",
