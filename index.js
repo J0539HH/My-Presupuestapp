@@ -67,6 +67,7 @@ app.get(
     "/Multimedia/detallado.svg",
     "/Multimedia/auditor.svg",
     "/modulos/tareasmenu/media/check.svg",
+    "/modulos/tareasmenu/media/movimiento.svg",
     "/modulos/tareasmenu/media/delete.svg",
     "/modulos/tareasmenu/media/delete1.svg",
     "/modulos/tareasmenu/Presupuesto.html",
