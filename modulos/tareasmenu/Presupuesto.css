@@ -411,7 +411,7 @@ body {
   } */
 
   .elemento_descripcion {
-    min-width: 194px;
+    max-width: 120px !important;
     float: left;
     font-size: small;
     max-width: min-content;
