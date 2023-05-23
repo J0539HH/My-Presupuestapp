@@ -86,11 +86,16 @@ body {
   display: grid;
   justify-content: center;
 }
+.CenterFlex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 .tabla-ingresos-egresos {
   border-collapse: collapse;
   margin-top: 20px;
-  width: 100%;
+  width: 98%;
 }
 
 .tabla-ingresos-egresos th,
@@ -139,7 +144,7 @@ body {
   height: 28px;
   padding-top: 7px;
   padding-left: 10px;
-  width: 110%;
+  width: 80%;
 }
 
 .presupuesto_egreso {
@@ -151,7 +156,7 @@ body {
   height: 28px;
   padding-top: 7px;
   padding-left: 10px;
-  width: 110%;
+  width: 80%;
 }
 .presupuesto_ingreso--texto {
   margin: 0 5px 0 0;
@@ -397,13 +402,13 @@ body {
 
 @media (max-width: 600px) {
   /* Estilos para pantallas pequeñas */
-
+  /* 
   .cabecero {
     min-width: 630px !important;
   }
   .contenedorAcciones {
     min-width: 630px !important;
-  }
+  } */
 
   .contenedor {
     display: flex;
