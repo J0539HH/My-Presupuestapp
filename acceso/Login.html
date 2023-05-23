@@ -38,13 +38,17 @@
         <div id="divGlobal" class="hidden">
             <div id="contInterfazLogin">
                 <section id="sectionHeader" class="row contForm">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12
+                    <div
+                        style="display: flex;align-items: center;justify-content:center;width: 100%;">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12
                         col-xs-12 contImgLogo">
-                        <div class="spaceSide">
-                            <div class="contTitle">
-                                <p class="pTextTitle">Ingreso al sistema</p>
-                                <p class="pTextSubTitle">¡Introduce tus datos de
-                                    acceso!</p>
+                            <div class="spaceSide">
+                                <div class="contTitle">
+                                    <p class="pTextTitle">Ingreso al sistema</p>
+                                    <p class="pTextSubTitle">¡Introduce tus
+                                        datos de
+                                        acceso!</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -61,7 +65,7 @@
                         </div>
                         <div class="form-group">
                             <label class="labelNameInput" for="usuario">Usuario</label>
-                            <input placeholder="" type="text"
+                            <input placeholder type="text"
                                 class="form-control" id="usuario" name="usuario"
                                 />
                             <span class="spanHelperErrorInput">El usuario es
@@ -73,7 +77,7 @@
                         col-xs-12">
                         <div class="form-group">
                             <label class="labelNameInput" for="password">Contraseña</label>
-                            <input placeholder="" type="password"
+                            <input placeholder type="password"
                                 class="form-control passwordInfo" id="password"
                                 name="password" />
                             <span class="spanHelperErrorInput">La contraseña es
@@ -106,9 +110,9 @@
             aria-hidden="true">
             <div class="modal-dialog dialogCambiarPass">
                 <section class="modal-content content-CambiarContra">
-                    <P class="tituloRestablecerContraseña text-center">Nuevo
+                    <p class="tituloRestablecerContraseña text-center">Nuevo
                         cliente del
-                        sistema</P>
+                        sistema</p>
                     <p class="InfoCambiarPass infoCambiarPass0">Al terminar, te
                         enviaremos la información del inicio de sesión por
                         correo electronico.</p>
@@ -125,7 +129,7 @@
                             <div class="form-group">
                                 <label class="labelNameInput" for="newUser">Nuevo
                                     usuario</label>
-                                <input placeholder="" type="text"
+                                <input placeholder type="text"
                                     class="form-control" id="newUser"
                                     name="newUser"
                                     />
@@ -137,7 +141,7 @@
                             <div class="form-group">
                                 <label class="labelNameInput" for="newPassword">Nueva
                                     contraseña</label>
-                                <input placeholder="" type="password"
+                                <input placeholder type="password"
                                     class="form-control passwordInfo"
                                     id="newPassword"
                                     name="newPassword" />
@@ -150,7 +154,7 @@
                                 <label class="labelNameInput"
                                     for="newPassword2">Repetir
                                     contraseña</label>
-                                <input placeholder="" type="password"
+                                <input placeholder type="password"
                                     class="form-control passwordInfo"
                                     id="newPassword2"
                                     name="newPassword2" />
@@ -162,7 +166,7 @@
                             <div class="form-group">
                                 <label class="labelNameInput" for="newCorreo">Correo
                                     electronico</label>
-                                <input placeholder="" type="text"
+                                <input placeholder type="text"
                                     class="form-control" id="newCorreo"
                                     name="newCorreo"
                                     />
@@ -173,7 +177,7 @@
                             <div class="form-group">
                                 <label class="labelNameInput" for="newName">Nombre
                                     completo</label>
-                                <input placeholder="" type="text"
+                                <input placeholder type="text"
                                     class="form-control" id="newName"
                                     name="newName"
                                     />
@@ -185,7 +189,6 @@
                                 btnCambiarpass" id="btnRegistrar">Registrar</button>
                         </div>
                     </section>
-
 
                 </section>
             </div>
