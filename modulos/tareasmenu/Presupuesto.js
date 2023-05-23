@@ -99,7 +99,7 @@ function limpiarCampos() {
 function insertarMovimiento() {
   let descripcion = $("#descripcion").val();
   if (descripcion === "") {
-    AlertIncorrectX("Debes agregar una descripcion del movimiento");
+    AlertIncorrectX("Debes agregar una descripción del movimiento");
     return;
   }
   let valorUnformated = $("#valor").val();
