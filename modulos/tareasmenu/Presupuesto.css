@@ -429,6 +429,30 @@ body {
     width: 100%;
     justify-content: center;
   }
+  .agregar_tipo {
+  margin-top: 14px;
+  border-radius: 4px;
+  padding-left: 4px !important;
+  min-width: 80% !important;
+  font-size: 15px;
+}
+.agregar_descripcion {
+  margin-top: 14px;
+  border-radius: 4px;
+  padding-top: 4px !important;
+  padding-left: 4px !important;
+  min-width: 80% !important;
+  min-height: 60px;
+  font-size: 15px;
+}
+
+.agregar_valor {
+  margin-top: 14px;
+  border-radius: 4px;
+  padding-left: 4px !important;
+  min-width: 80% !important;
+  font-size: 15px;
+}
 
   .contenedor {
     display: flex;
