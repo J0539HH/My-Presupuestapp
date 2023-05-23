@@ -409,9 +409,14 @@ body {
   .contenedorAcciones {
     min-width: 630px !important;
   } */
+  .elemento_valor {
+    font-weight: bold;
+    margin-left: 10px;
+    min-width: 90px;
+  }
 
   .elemento_descripcion {
-    max-width: 120px !important;
+    max-width: 106px !important;
     float: left;
     font-size: small;
     max-width: min-content;
