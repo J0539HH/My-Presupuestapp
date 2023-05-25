@@ -198,6 +198,11 @@ function cargarTabla(datos) {
   movimientosOUTtotales = 0;
   movimientosINtotales = 0;
 
+  // Ordenar los datos por fecha en orden descendente
+  datos.data.sort(function (a, b) {
+    return new Date(b.fecha) - new Date(a.fecha);
+  });
+
   $.each(datos.data, function (index, movimiento) {
     if (movimiento.ingreso) {
       ingresos.push(movimiento.valor);

@@ -5,8 +5,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/png" href="../../Multimedia/favicon.png"
-            />
+        <link rel="icon" type="image/png" href="../../Multimedia/favicon.png" />
         <title>Aplicación de presupuesto</title>
         <!-- CSS Site -->
         <link rel="stylesheet" href="../tareasmenu/Presupuesto.css" />
@@ -20,20 +19,17 @@
 
         <!-- Bootstrap Icon-->
         <link rel="stylesheet"
-            href="../../lib/js/vendor/bootstrap-icons-1.2.2/font/bootstrap-icons.css"
-            />
+            href="../../lib/js/vendor/bootstrap-icons-1.2.2/font/bootstrap-icons.css" />
         <!-- OverlayScrollbars -->
         <link rel="stylesheet"
-            href="../../lib/js/vendor/OverlayScrollbars/css/OverlayScrollbars.min.css"
-            />
+            href="../../lib/js/vendor/OverlayScrollbars/css/OverlayScrollbars.min.css" />
         <!-- Sweet Alert -->
         <link rel="stylesheet"
             href="../../lib/js/vendor/sweetalert2/dist/sweetalert2.min.css" />
         <!-- Global CSS -->
         <link rel="stylesheet" href="../../modulos/principal/styleGlobal.css" />
         <!-- CSS Site -->
-        <link rel="stylesheet" href="../../lib/jQuery/alertas/jquery.alerts.css"
-            />
+        <link rel="stylesheet" href="../../lib/jQuery/alertas/jquery.alerts.css" />
 
     </head>
     <body>
@@ -44,21 +40,24 @@
             </div>
             <div class="presupuesto_valor" id="presupuesto">+ 0.00 </div>
             <div class="CenterFlex">
-            <div class="presupuesto_ingreso limpiarEstilos">
-                <div class="presupuesto_ingreso--texto">Ingresos</div>
-                <div class="derechaC">
-                    <div class="presupuesto_ingreso--valor" id="ingresosTotales">+
-                        0.00</div>
+                <div class="presupuesto_ingreso limpiarEstilos">
+                    <div class="presupuesto_ingreso--texto">Ingresos</div>
+                    <div class="derechaC">
+                        <div class="presupuesto_ingreso--valor"
+                            id="ingresosTotales">+
+                            0.00</div>
+                    </div>
                 </div>
-            </div>
-            <div class="presupuesto_egreso limpiarEstilos">
-                <div class="presupuesto_egreso--texto">Gastos</div>
-                <div class="derechaC limpiarEstilos">
-                    <div class="presupuesto_egreso--valor" id="egresosTotales">-
-                        0.00</div>
-                    <div class="presupuesto_egreso--porcentaje" id="porcentaje">0%</div>
+                <div class="presupuesto_egreso limpiarEstilos">
+                    <div class="presupuesto_egreso--texto">Gastos</div>
+                    <div class="derechaC limpiarEstilos">
+                        <div class="presupuesto_egreso--valor"
+                            id="egresosTotales">-
+                            0.00</div>
+                        <div class="presupuesto_egreso--porcentaje"
+                            id="porcentaje">0%</div>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
         <div id="agregarContenedor" class="contenedorAcciones"> <button
@@ -71,32 +70,13 @@
                 <thead>
                     <tr>
                         <th class="txtCnt vertical-th">
-                            <i class="bi bi-cash-stack"></i> Ingresos
-                            <p id="contadorIngresos"></p>
+                            <i class="bi bi-cash-stack"></i> Egresos
+                            <p id="contadorEgresos"></p>
                         </th>
 
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td id="columnaIngresos" style="width: 50%;">
-                            <div class="elemento">
-                                <div class="elemento_descripcion">Salario</div>
-                                <div class="derecha">
-                                    <div class="elemento_valor" style="flex: 1;">+
-                                        $2.000.000</div>
-                                    <div class="elemento_eliminar">
-                                        <img class="elemento_eliminar--btn"
-                                            src="./media/delete1.svg">
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <th class="txtCnt vertical-th">
-                        <i class="bi bi-cash-stack"></i> Egresos
-                        <p id="contadorEgresos"></p>
-                    </th>
                     <tr>
                         <td id="columnaEgresos" style="width: 50%;">
                             <div class="elemento">
@@ -123,6 +103,27 @@
                             </div>
                         </td>
                     </tr>
+                    <th class="txtCnt vertical-th">
+                        <i class="bi bi-cash-stack"></i> Ingresos
+                        <p id="contadorIngresos"></p>
+                    </th>
+
+                    <tr>
+                        <td id="columnaIngresos" style="width: 50%;">
+                            <div class="elemento">
+                                <div class="elemento_descripcion">Salario</div>
+                                <div class="derecha">
+                                    <div class="elemento_valor" style="flex: 1;">+
+                                        $2.000.000</div>
+                                    <div class="elemento_eliminar">
+                                        <img class="elemento_eliminar--btn"
+                                            src="./media/delete1.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
                 </tbody>
             </table>
         </div>
@@ -143,50 +144,51 @@
                         <textarea class="agregar_descripcion"
                             placeholder="Descripcion" id="descripcion"
                             step="any"></textarea>
-                            <input
-                                onkeyup="this.value= NumerosFormateados(this.value)"
-                                class="agregar_valor"
-                                placeholder="Valor" id="valor"
-                                step="any"/>
-                            <div class="contenedorIcono">
-                                <img class="agregarIcon" src="./media/movimiento.svg"
-                                    id="agregar">
-                            </div>
+                        <input
+                            onkeyup="this.value= NumerosFormateados(this.value)"
+                            class="agregar_valor"
+                            placeholder="Valor" id="valor"
+                            step="any" />
+                        <div class="contenedorIcono">
+                            <img class="agregarIcon"
+                                src="./media/movimiento.svg"
+                                id="agregar">
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Spinner Site -->
-            <div id="spinner" class="spinner">
-                <div class="contSpinner">
-                    <img class="spinner-img" src="../../Multimedia/spinner.gif"
-                        alt="Loading" />
-                    <div id="textLoad" class="spinner-msg"></div>
-                </div>
+        <!-- Spinner Site -->
+        <div id="spinner" class="spinner">
+            <div class="contSpinner">
+                <img class="spinner-img" src="../../Multimedia/spinner.gif"
+                    alt="Loading" />
+                <div id="textLoad" class="spinner-msg"></div>
             </div>
+        </div>
 
-            <!-- JavaScript -->
-            <script src="../tareasmenu/Presupuesto.js"></script>
-            <!-- jQuery -->
-            <script src="../../lib/js/vendor/jquery-3.6.1/jquery-3.6.1.js"></script>
-            <script src="../../lib/jQuery/utilidadesjQuery.js"></script>
-            <script src="../../lib/jQuery/alertas/jquery.alerts.js"></script>
-            <!-- Popper -->
-            <script src="../../lib/js/vendor/popper-1.16.0/popper.min.js"></script>
-            <!-- Bootstrap -->
-            <script
-                src="../../lib/js/vendor/bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
-            <!-- OverlayScrollbars -->
-            <script
-                src="../../lib/js/vendor/OverlayScrollbars/js/jquery.overlayScrollbars.min.js"
-                type="text/javascript"></script>
-            <!-- Sweet Alert -->
-            <script
-                src="../../lib/js/vendor/sweetalert2/dist/sweetalert2.min.js"
-                type="text/javascript"></script>
-            <!-- Script Global -->
-            <script src="../../modulos/principal/scriptGlobal.js"></script>
-        </body>
+        <!-- JavaScript -->
+        <script src="../tareasmenu/Presupuesto.js"></script>
+        <!-- jQuery -->
+        <script src="../../lib/js/vendor/jquery-3.6.1/jquery-3.6.1.js"></script>
+        <script src="../../lib/jQuery/utilidadesjQuery.js"></script>
+        <script src="../../lib/jQuery/alertas/jquery.alerts.js"></script>
+        <!-- Popper -->
+        <script src="../../lib/js/vendor/popper-1.16.0/popper.min.js"></script>
+        <!-- Bootstrap -->
+        <script
+            src="../../lib/js/vendor/bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
+        <!-- OverlayScrollbars -->
+        <script
+            src="../../lib/js/vendor/OverlayScrollbars/js/jquery.overlayScrollbars.min.js"
+            type="text/javascript"></script>
+        <!-- Sweet Alert -->
+        <script
+            src="../../lib/js/vendor/sweetalert2/dist/sweetalert2.min.js"
+            type="text/javascript"></script>
+        <!-- Script Global -->
+        <script src="../../modulos/principal/scriptGlobal.js"></script>
+    </body>
 
-    </html>
+</html>
